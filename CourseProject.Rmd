@@ -60,7 +60,7 @@ None of the predicors are near zero vriance and hence will not be removed.
 
 We will try Boosting and Random Forest models.
 The model will be selected based on better accuracy.
-The trining data set is partitioned into two parts, one for training
+The training data set is partitioned into two parts, one for training
 and the other for testing.
 
 ```{r, cache=TRUE}
@@ -94,7 +94,7 @@ cm2$overall[1]
 The in sample accuracy is 0.9756 while the out of sample accuracy is 0.962 when
 using Boosting based prediction model.
 
-###Random forest with 4 fold cross validation###
+###Random Forest with 4 fold cross validation###
 ```{r, cache=TRUE}
 set.seed(4444)
 rfFit <- train(classe ~ ., method = "rf", data = myTraining, preProcess=c("center", "scale"), 
